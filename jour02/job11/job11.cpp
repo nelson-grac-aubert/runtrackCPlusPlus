@@ -20,8 +20,8 @@ int getUserInput(string description) {
         else if (input < 0) {
             cout << "Invalid input! Integer must be positive.\n";
         }
-        else if (input > 31) {
-            cout << "Invalid input! Must be below 31 to avoid integer overflow\n";
+        else if (input > 20) {
+            cout << "Invalid input! Must be below 21 to avoid integer overflow\n";
         }
         else {
             inputIsValid = true; 
@@ -31,22 +31,22 @@ int getUserInput(string description) {
     return input;
 }
 
-void printResult (int n, long factor) {
+void printResult (int n, int factor) {
     cout << "Factorial(" << n << ") is " << factor << endl;
 }
 
-long factorial(int n) { 
+int factorial(int n) { 
 
-    long factor = 1;
+    int factor = 1;
     
-    for (int i = 2; i <= n; i++) {
+    for (int i = 1; i <= n; i++) {
         factor *= i;
     }
 
     return factor;
 }
 
-long recursiveFactorial(int n) { 
+int recursiveFactorial(int n) { 
 
     if (n == 0) { 
         return 1; 
@@ -58,11 +58,11 @@ long recursiveFactorial(int n) {
 int main() {
 
     int userInput = getUserInput("Enter the number you want the factorial of");
-    long fact = factorial(userInput);
+    int fact = factorial(userInput);
     printResult(userInput, fact);
-    long recursFact = recursiveFactorial(userInput);
+    int recursFact = recursiveFactorial(userInput);
     printResult(userInput, recursFact);
-    return 1;
+    return 0;
 }
 
 /* Impossible d'arriver a un stack overflow avec un max d'une trentaine de récursion? 

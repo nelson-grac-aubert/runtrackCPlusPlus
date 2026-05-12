@@ -52,5 +52,5 @@ int main() {
     choice = getUserInput("Chose your number to check");
     checkIfIsIncluded(low, high, choice); 
 
-    return 1;
+    return 0;
 }

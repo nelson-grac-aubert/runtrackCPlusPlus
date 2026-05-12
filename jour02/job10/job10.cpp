@@ -38,5 +38,5 @@ int main() {
     int userInput = getUserInput("Enter the positive number you want rooted"); 
     cout << "The square root of " << userInput << " is " << square(userInput); 
 
-    return 1;
+    return 0;
 }

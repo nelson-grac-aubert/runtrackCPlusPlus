@@ -51,5 +51,5 @@ int main() {
     }
 
     displayAllInts(low, high);
-    return 1;
+    return 0;
 }
