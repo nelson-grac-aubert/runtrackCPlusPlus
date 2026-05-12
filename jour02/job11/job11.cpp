@@ -26,7 +26,7 @@ void printResult(int n, long long result) {
 }
 
 // Max is 20: 21! overflows long long
-int getUserInput(const string& description) {
+int getUserInput(string description) {
 
     int input;
     bool isValid = false;
