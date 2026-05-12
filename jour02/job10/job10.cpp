@@ -14,7 +14,7 @@ float getUserInput(string description) {
         cin >> input; 
 
         if (cin.fail()) {
-            cout << "Invalid input! An integer is expected.\n";
+            cout << "Invalid input! A float is expected.\n";
             cin.clear(); // Removes the errors in cin
             cin.ignore(numeric_limits<streamsize>::max(), '\n'); // Ignore every character in the cin until you end up on an \n
         }
