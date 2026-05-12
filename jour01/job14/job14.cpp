@@ -49,7 +49,7 @@ int main() {
     int theInt = getUserIntInput();
     std::string theString = convertIntToString(theInt); 
     std::string reversedString = reverseTheString(theString);
-    int newInt = convertTheStringBackToInt(reversedString);
+    convertTheStringBackToInt(reversedString);
 
     return 0;
 }
