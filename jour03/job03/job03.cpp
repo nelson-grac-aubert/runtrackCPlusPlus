@@ -26,4 +26,5 @@ int main() {
     areTheSameStrings("Hello, World!", "Hello, World!");
     areTheSameStrings("Hello, World!", "Hello, C++");
     areTheSameStrings("Hello, World!", "Hello, Zorld!");
+    return 0;
 }

@@ -25,5 +25,6 @@ string deleteVowels(string aString) {
 int main() {
 
     deleteVowels("vive la Plateforme!");
+    return 0;
     
 }
