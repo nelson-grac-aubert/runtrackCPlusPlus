@@ -1,0 +1,51 @@
+#include "../include/job08.hpp"
+
+string getUserInput() {
+
+    string input;
+    bool inputIsValid = false;
+
+    while (!inputIsValid) {
+        cout << "Enter your string : ";
+        cin >> input;
+
+        if (cin.fail()) {
+            cout << "Invalid input! A string is expected.\n";
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        } else {
+            inputIsValid = true;
+        }
+    }
+
+    return input;
+}
+
+char* buildTheArray(string theString) { 
+ 
+    const int SIZE = theString.length();
+
+    char* theArray = new char[SIZE+1];
+
+    for (int i = 0; i < SIZE; i++) { 
+        theArray[i] = theString[i]; 
+    }
+
+    theArray[SIZE+1] = '\0';
+
+    return theArray;
+}
+
+int main() {
+
+    string theString = getUserInput();
+
+    char* theArray = buildTheArray(theString); 
+
+    cout << "Your string as a char array : " << theArray << "\n";
+
+    delete[] theArray;
+    theArray = nullptr;
+
+    return 0;
+}
