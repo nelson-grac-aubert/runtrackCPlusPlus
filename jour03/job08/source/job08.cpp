@@ -7,12 +7,10 @@ string getUserInput() {
 
     while (!inputIsValid) {
         cout << "Enter your string : ";
-        cin >> input;
+        getline(cin, input); // reads the entire line, spaces included
 
-        if (cin.fail()) {
+        if (input.empty()) {
             cout << "Invalid input! A string is expected.\n";
-            cin.clear();
-            cin.ignore(numeric_limits<streamsize>::max(), '\n');
         } else {
             inputIsValid = true;
         }
@@ -31,7 +29,7 @@ char* buildTheArray(string theString) {
         theArray[i] = theString[i]; 
     }
 
-    theArray[SIZE+1] = '\0';
+    theArray[SIZE] = '\0';
 
     return theArray;
 }
