@@ -33,7 +33,7 @@ int countAboveFive(int myArray[10]) {
     int counter = 0;
 
     for (int i = 0; i < 10; i++) {
-        if (myArray[i] <= 5) {
+        if (myArray[i] >= 5) {
             counter += 1;
         }
     }

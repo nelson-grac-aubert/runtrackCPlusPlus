@@ -13,8 +13,6 @@ void addThroughPointer(int *myInt) {
 
 int main() 
 { 
-    std::cout << "Hello World!" << std::endl;
-
     int a = 42;
     int *b = &a; 
 
